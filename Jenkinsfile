@@ -19,14 +19,15 @@ pipeline {
         }
 
         stage('Test (Unit tests in Docker)') {
-            agent {
-                docker {
-                    image 'python:3.11-slim'
-                    args '-u root'
-                }
-            }
+            agent any
             steps {
-                sh 'python -m unittest discover'
+                bat '''
+                docker run --rm ^
+                  -v %CD%:/app ^
+                  -w /app ^
+                  python:3.11-slim ^
+                  python -m unittest discover
+                '''
             }
         }
 
