@@ -4,7 +4,7 @@ class NewsFeed:
         self._queue = []
 
     def add_news(self, title: str, content: str) -> bool:
-        # Додає новину в кінець черги
+        # Додає новину в кінець черги (ТЕСТ)
         # Валідація: заголовок і зміст не можуть бути порожніми
         if not title or not content:
             raise ValueError("Заголовок або зміст не можуть бути порожніми")
