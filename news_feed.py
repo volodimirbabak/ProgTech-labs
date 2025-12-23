@@ -1,6 +1,6 @@
 class NewsFeed:
     def __init__(self):
-        # Ініціалізація черги нови
+        # Ініціалізація черги новин
         self._queue = []
 
     def add_news(self, title: str, content: str) -> bool:
