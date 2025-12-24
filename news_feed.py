@@ -1,6 +1,6 @@
 class NewsFeed:
     def __init__(self):
-        # Ініціалізація черги новин
+        # Ініціалізація черги новин 
         self._queue = []
 
     def add_news(self, title: str, content: str) -> bool:
@@ -17,7 +17,7 @@ class NewsFeed:
         # Повертає та видаляє першу новину (FIFO)
         # Якщо черга порожня — викидає IndexError
         if len(self._queue) == 0:
-            raise IndexError("Стрічка новин порожня, немає чого публікувати")
+            raise IndexError("Стрічка новин порожня, немає чого публікувати!!!!")
         
         return self._queue.pop(0)
 
