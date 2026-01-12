@@ -7,7 +7,7 @@ class NewsFeed:
         # Додає новину в кінець черги 
         # Валідація: заголовок і зміст не можуть бути порожніми
         if not title or not content:
-            raise ValueError("Заголовок або зміст не можуть бути порожніми")
+            raise ValueError("Заголовок або зміст не можуть бути порожніми111")
         
         news_item = {"title": title, "content": content}
         self._queue.append(news_item)
